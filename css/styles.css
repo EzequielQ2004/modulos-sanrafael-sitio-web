@@ -122,8 +122,8 @@ body {
 /* ===== HERO SECTION ===== */
 .hero {
     background: linear-gradient(135deg, rgba(42, 42, 42, 0.9) 0%, rgba(21, 21, 21, 0.95) 100%), 
-                url('../img/hero/hero.png') center/cover no-repeat;
-    background-attachment: fixed;
+                url('../img/hero/hero.jpeg') center/cover no-repeat;
+    /* background-attachment: fixed; */
     color: white;
     padding: 100px 20px;
     text-align: center;
@@ -439,7 +439,6 @@ body {
 }
 
 /* ===== PRODUCTS SECTION ===== */
-/* ===== PRODUCTS SECTION ===== */
 .products {
     padding: 80px 20px;
     background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-color) 100%);
@@ -476,45 +475,50 @@ body {
     font-style: italic;
 }
 
-/* ===== CARRUSEL PARA MÓVILES ===== */
+/* ===== CARRUSEL MÓVIL - SCROLL SNAP CORREGIDO ===== */
 .products-carousel {
     display: block;
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
+    padding: 20px 0;
 }
 
 .products-wrapper {
     overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE y Edge */
-    padding: 20px 0;
+    scroll-snap-type: x mandatory; /* ¡Enganche preciso en cada tarjeta! */
+    -webkit-overflow-scrolling: touch; /* Momentum suave en iOS */
+    scrollbar-width: none; /* Oculta scrollbar en Firefox */
+    -ms-overflow-style: none; /* Oculta scrollbar en IE/Edge */
+    padding: 0 16px; /* Espacio a los costados para ver "pista" del siguiente producto */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .products-wrapper::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none; /* Oculta scrollbar en Chrome/Safari */
 }
 
 .products-track {
     display: flex;
-    gap: 20px;
-    padding: 0 20px;
-    transition: transform 0.5s ease;
+    gap: 16px; /* Espacio entre tarjetas */
+    padding: 0;
+    margin: 0;
 }
 
+/* Cada tarjeta ocupa EXACTAMENTE el ancho visible (menos padding del wrapper) */
 .product-card {
-    min-width: 250px;
+    scroll-snap-align: start; /* Cada tarjeta se engancha al borde izquierdo */
+    flex-shrink: 0; /* Evita que se contraigan */
+    width: calc(100% - 32px); /* 100% del ancho visible - padding del wrapper (16px * 2) */
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
     background-color: var(--bg-card);
     padding: 20px;
     border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: all 0.3s;
     border: 1px solid var(--border-color);
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    transition: all 0.3s;
 }
 
 .product-card:hover {
@@ -524,59 +528,58 @@ body {
     background-color: var(--bg-card-hover);
 }
 
-.product-card.clone {
-    opacity: 0.7;
-}
-
-/* Imagen del producto */
+/* Imagen del producto - optimizado para móvil */
 .product-image {
     width: 100%;
-    height: 150px;
+    height: 180px; /* Altura fija para consistencia */
     margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    position: relative;
 }
 
 .product-image img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90%; /* Evita que la imagen toque los bordes */
+    max-height: 90%;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
 .product-card:hover .product-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .product-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* Un poco más grande para mejor legibilidad */
     margin-bottom: 10px;
     color: var(--text-color);
+    min-height: 2.2em; /* Altura mínima para evitar saltos */
 }
 
 .product-price {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 20px;
     text-shadow: var(--shadow-neon);
+    min-height: 1.8em;
 }
 
 .btn-product {
     display: inline-block;
-    padding: 8px 18px;
+    padding: 10px 20px; /* Más grande para tocar fácil en móvil */
     background-color: var(--accent-color);
     color: white;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 0.85rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
     transition: all 0.3s;
     border: 2px solid var(--accent-color);
     margin-top: auto;
+    width: 100%; /* Botón ocupa todo el ancho */
+    box-sizing: border-box;
 }
 
 .btn-product:hover {
@@ -585,61 +588,85 @@ body {
     transform: translateY(-2px);
 }
 
-/* Botones de navegación */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: rgba(42, 42, 42, 0.8);
-    color: var(--primary-color);
-    border: none;
-    border-radius: 50%;
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-    box-shadow: var(--shadow);
-}
-
-.carousel-btn:hover {
-    background-color: rgba(42, 42, 42, 1);
-    transform: translateY(-50%) scale(1.1);
-    color: white;
-}
-
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
-
-/* Indicadores de página */
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+/* ===== GRID PARA DESKTOP (sin cambios) ===== */
+.products-grid-desktop {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
     margin-top: 20px;
 }
 
-.carousel-indicators span {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--border-color);
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* Responsive: carrusel en móvil, grid en desktop */
+@media (max-width: 768px) {
+    .products-grid-desktop {
+        display: none;
+    }
+    
+    /* Ajuste extra para pantallas muy pequeñas */
+    .product-card {
+        width: calc(100% - 24px); /* Menos padding en pantallas pequeñas */
+        padding: 16px;
+    }
+    
+    .product-image {
+        height: 160px;
+    }
 }
 
-.carousel-indicators span.active {
-    background-color: var(--primary-color);
+@media (min-width: 769px) {
+    .products-carousel {
+        display: none;
+    }
+    
+    .products-grid-desktop {
+        display: grid;
+    }
+    
+    /* En desktop, las tarjetas vuelven a su tamaño normal */
+    .product-card {
+        min-width: auto;
+        max-width: none;
+        width: auto;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+    
+    .btn-product {
+        width: auto;
+    }
+}
+
+/* ===== GRID PARA DESKTOP ===== */
+.products-grid-desktop {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Responsive: carrusel en móvil, grid en desktop */
+@media (max-width: 768px) {
+    .products-grid-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .products-carousel {
+        display: none;
+    }
+    
+    .products-grid-desktop {
+        display: grid;
+    }
+    
+    /* En desktop, las tarjetas vuelven a su tamaño normal */
+    .product-card {
+        min-width: auto;
+        max-width: none;
+    }
 }
 
 /* ===== GRID PARA DESKTOP ===== */
