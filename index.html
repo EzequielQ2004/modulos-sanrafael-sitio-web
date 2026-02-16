@@ -132,77 +132,218 @@
     <section class="services" id="servicios">
         <div class="container">
             <h2>Nuestros Servicios</h2>
-            <div class="services-grid">
-                <!-- Service 1: Cambio de Pantalla -->
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="img/services/pantalla.jpg" alt="Cambio de Pantalla">
+            
+            <!-- Carrusel para móviles -->
+            <div class="services-carousel">
+                <div class="services-wrapper">
+                    <div class="services-track">
+                        <!-- Service 1: Cambio de Pantalla -->
+                        <div class="service-card" data-service="1">
+                            <div class="service-image-container">
+                                <div class="service-image">
+                                    <img src="img/services/pantalla.jpg" alt="Cambio de Pantalla">
+                                </div>
+                                <div class="service-details-overlay">
+                                    <p class="price">Desde $8.000</p>
+                                    <p class="time">⏱️ Tiempo: 30-60 minutos</p>
+                                    <p class="description">Reemplazo completo de pantalla con repuestos originales. Incluye display, touch y cristal protector.</p>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Cambio de Pantalla</h3>
+                                <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de pantalla" class="btn-service">Consultar</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 2: Cambio de Batería -->
+                        <div class="service-card" data-service="2">
+                            <div class="service-image-container">
+                                <div class="service-image">
+                                    <img src="img/services/bateria.jpg" alt="Cambio de Batería">
+                                </div>
+                                <div class="service-details-overlay">
+                                    <p class="price">Desde $4.500</p>
+                                    <p class="time">⏱️ Tiempo: 20-40 minutos</p>
+                                    <p class="description">Batería nueva original con garantía. Devolvemos la vida útil a tu equipo.</p>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Cambio de Batería</h3>
+                                <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de batería" class="btn-service">Consultar</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 3: Módulo Completo -->
+                        <div class="service-card" data-service="3">
+                            <div class="service-image-container">
+                                <div class="service-image">
+                                    <img src="img/services/modulo.jpg" alt="Módulo Completo">
+                                </div>
+                                <div class="service-details-overlay">
+                                    <p class="price">Desde $12.000</p>
+                                    <p class="time">⏱️ Tiempo: 1-2 horas</p>
+                                    <p class="description">Reemplazo de módulo completo incluyendo pantalla, carcasa y componentes internos.</p>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Módulo Completo</h3>
+                                <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de módulo completo" class="btn-service">Consultar</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 4: Reparación por Agua -->
+                        <div class="service-card" data-service="4">
+                            <div class="service-image-container">
+                                <div class="service-image">
+                                    <img src="img/services/agua.jpg" alt="Reparación por Agua">
+                                </div>
+                                <div class="service-details-overlay">
+                                    <p class="price">Desde $6.000</p>
+                                    <p class="time">⏱️ Tiempo: 24-48 horas</p>
+                                    <p class="description">Limpieza profunda y recuperación de equipos con daños por líquidos.</p>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Reparación por Agua</h3>
+                                <a href="https://wa.me/5492604000000?text=Hola! Consulto por reparación por agua" class="btn-service">Consultar</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 5: Cambio de Conector -->
+                        <div class="service-card" data-service="5">
+                            <div class="service-image-container">
+                                <div class="service-image">
+                                    <img src="img/services/conector.jpg" alt="Cambio de Conector">
+                                </div>
+                                <div class="service-details-overlay">
+                                    <p class="price">Desde $3.500</p>
+                                    <p class="time">⏱️ Tiempo: 30-45 minutos</p>
+                                    <p class="description">Reparación de puerto de carga, micrófono o parlantes. Solución a problemas de carga y audio.</p>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Cambio de Conector</h3>
+                                <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de conector" class="btn-service">Consultar</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 6: Diagnóstico Técnico -->
+                        <div class="service-card" data-service="6">
+                            <div class="service-image-container">
+                                <div class="service-image">
+                                    <img src="img/services/diagnostico.jpg" alt="Diagnóstico Técnico">
+                                </div>
+                                <div class="service-details-overlay">
+                                    <p class="price">GRATIS</p>
+                                    <p class="time">⏱️ Tiempo: 15-30 minutos</p>
+                                    <p class="description">Revisión completa de tu equipo sin costo. Identificamos el problema y te damos un presupuesto.</p>
+                                </div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3>Diagnóstico Técnico</h3>
+                                <a href="https://wa.me/5492604000000?text=Hola! Necesito un diagnóstico técnico" class="btn-service">Solicitar</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Cambio de Pantalla</h3>
-                    <p class="price">Desde $8.000</p>
-                    <p class="time">⏱️ Tiempo: 30-60 minutos</p>
-                    <p class="description">Reemplazo completo de pantalla con repuestos originales. Incluye display, touch y cristal protector.</p>
-                    <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de pantalla" class="btn-service">Consultar por WhatsApp</a>
                 </div>
+            </div>
 
-                <!-- Service 2: Cambio de Batería -->
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="img/services/bateria.jpg" alt="Cambio de Batería">
+            <!-- Grid para desktop (SIN borde azul) -->
+            <div class="services-grid-desktop">
+                <!-- Service 1 -->
+                <div class="service-card-desktop">
+                    <div class="service-image-container">
+                        <div class="service-image">
+                            <img src="img/services/pantalla.jpg" alt="Cambio de Pantalla">
+                        </div>
                     </div>
-                    <h3>Cambio de Batería</h3>
-                    <p class="price">Desde $4.500</p>
-                    <p class="time">⏱️ Tiempo: 20-40 minutos</p>
-                    <p class="description">Batería nueva original con garantía. Devolvemos la vida útil a tu equipo.</p>
-                    <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de batería" class="btn-service">Consultar por WhatsApp</a>
+                    <div class="service-card-content">
+                        <h3>Cambio de Pantalla</h3>
+                        <p class="price">Desde $8.000</p>
+                        <p class="time">⏱️ Tiempo: 30-60 minutos</p>
+                        <p class="description">Reemplazo completo de pantalla con repuestos originales. Incluye display, touch y cristal protector.</p>
+                        <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de pantalla" class="btn-service">Consultar por WhatsApp</a>
+                    </div>
                 </div>
-
-                <!-- Service 3: Módulo Completo -->
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="img/services/modulo.jpg" alt="Módulo Completo">
+                
+                <!-- Service 2 -->
+                <div class="service-card-desktop">
+                    <div class="service-image-container">
+                        <div class="service-image">
+                            <img src="img/services/bateria.jpg" alt="Cambio de Batería">
+                        </div>
                     </div>
-                    <h3>Módulo Completo</h3>
-                    <p class="price">Desde $12.000</p>
-                    <p class="time">⏱️ Tiempo: 1-2 horas</p>
-                    <p class="description">Reemplazo de módulo completo incluyendo pantalla, carcasa y componentes internos.</p>
-                    <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de módulo completo" class="btn-service">Consultar por WhatsApp</a>
+                    <div class="service-card-content">
+                        <h3>Cambio de Batería</h3>
+                        <p class="price">Desde $4.500</p>
+                        <p class="time">⏱️ Tiempo: 20-40 minutos</p>
+                        <p class="description">Batería nueva original con garantía. Devolvemos la vida útil a tu equipo.</p>
+                        <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de batería" class="btn-service">Consultar por WhatsApp</a>
+                    </div>
                 </div>
-
-                <!-- Service 4: Reparación por Agua -->
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="img/services/agua.jpg" alt="Reparación por Agua">
+                
+                <!-- Service 3 -->
+                <div class="service-card-desktop">
+                    <div class="service-image-container">
+                        <div class="service-image">
+                            <img src="img/services/modulo.jpg" alt="Módulo Completo">
+                        </div>
                     </div>
-                    <h3>Reparación por Agua</h3>
-                    <p class="price">Desde $6.000</p>
-                    <p class="time">⏱️ Tiempo: 24-48 horas</p>
-                    <p class="description">Limpieza profunda y recuperación de equipos con daños por líquidos. Evaluación previa necesaria.</p>
-                    <a href="https://wa.me/5492604000000?text=Hola! Consulto por reparación por agua" class="btn-service">Consultar por WhatsApp</a>
+                    <div class="service-card-content">
+                        <h3>Módulo Completo</h3>
+                        <p class="price">Desde $12.000</p>
+                        <p class="time">⏱️ Tiempo: 1-2 horas</p>
+                        <p class="description">Reemplazo de módulo completo incluyendo pantalla, carcasa y componentes internos.</p>
+                        <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de módulo completo" class="btn-service">Consultar por WhatsApp</a>
+                    </div>
                 </div>
-
-                <!-- Service 5: Cambio de Conector -->
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="img/services/conector.jpg" alt="Cambio de Conector">
+                
+                <!-- Service 4 -->
+                <div class="service-card-desktop">
+                    <div class="service-image-container">
+                        <div class="service-image">
+                            <img src="img/services/agua.jpg" alt="Reparación por Agua">
+                        </div>
                     </div>
-                    <h3>Cambio de Conector</h3>
-                    <p class="price">Desde $3.500</p>
-                    <p class="time">⏱️ Tiempo: 30-45 minutos</p>
-                    <p class="description">Reparación de puerto de carga, micrófono o parlantes. Solución a problemas de carga y audio.</p>
-                    <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de conector" class="btn-service">Consultar por WhatsApp</a>
+                    <div class="service-card-content">
+                        <h3>Reparación por Agua</h3>
+                        <p class="price">Desde $6.000</p>
+                        <p class="time">⏱️ Tiempo: 24-48 horas</p>
+                        <p class="description">Limpieza profunda y recuperación de equipos con daños por líquidos. Evaluación previa necesaria.</p>
+                        <a href="https://wa.me/5492604000000?text=Hola! Consulto por reparación por agua" class="btn-service">Consultar por WhatsApp</a>
+                    </div>
                 </div>
-
-                <!-- Service 6: Diagnóstico Técnico -->
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="img/services/diagnostico.jpg" alt="Diagnóstico Técnico">
+                
+                <!-- Service 5 -->
+                <div class="service-card-desktop">
+                    <div class="service-image-container">
+                        <div class="service-image">
+                            <img src="img/services/conector.jpg" alt="Cambio de Conector">
+                        </div>
                     </div>
-                    <h3>Diagnóstico Técnico</h3>
-                    <p class="price">GRATIS</p>
-                    <p class="time">⏱️ Tiempo: 15-30 minutos</p>
-                    <p class="description">Revisión completa de tu equipo sin costo. Identificamos el problema y te damos un presupuesto sin compromiso.</p>
-                    <a href="https://wa.me/5492604000000?text=Hola! Necesito un diagnóstico técnico" class="btn-service">Solicitar Diagnóstico</a>
+                    <div class="service-card-content">
+                        <h3>Cambio de Conector</h3>
+                        <p class="price">Desde $3.500</p>
+                        <p class="time">⏱️ Tiempo: 30-45 minutos</p>
+                        <p class="description">Reparación de puerto de carga, micrófono o parlantes. Solución a problemas de carga y audio.</p>
+                        <a href="https://wa.me/5492604000000?text=Hola! Consulto por cambio de conector" class="btn-service">Consultar por WhatsApp</a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card-desktop">
+                    <div class="service-image-container">
+                        <div class="service-image">
+                            <img src="img/services/diagnostico.jpg" alt="Diagnóstico Técnico">
+                        </div>
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Diagnóstico Técnico</h3>
+                        <p class="price">GRATIS</p>
+                        <p class="time">⏱️ Tiempo: 15-30 minutos</p>
+                        <p class="description">Revisión completa de tu equipo sin costo. Identificamos el problema y te damos un presupuesto sin compromiso.</p>
+                        <a href="https://wa.me/5492604000000?text=Hola! Necesito un diagnóstico técnico" class="btn-service">Solicitar Diagnóstico</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -234,7 +375,7 @@
                             </div>
                             <h3>Vidrios Templados</h3>
                             <p class="product-price">Desde $1.800</p>
-                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Vidrios Templados" class="btn-product">Consultar Disponibilidad</a>
+                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Vidrios Templados" class="btn-product">Consultar</a>
                         </div>
                         <!-- Product 3 -->
                         <div class="product-card">
@@ -243,7 +384,7 @@
                             </div>
                             <h3>Cargadores Rápidos</h3>
                             <p class="product-price">Desde $3.500</p>
-                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Cargadores Rápidos" class="btn-product">Consultar Disponibilidad</a>
+                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Cargadores Rápidos" class="btn-product">Consultar</a>
                         </div>
                         <!-- Product 4 -->
                         <div class="product-card">
@@ -252,7 +393,7 @@
                             </div>
                             <h3>Cables USB-C</h3>
                             <p class="product-price">Desde $1.500</p>
-                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Cables USB-C" class="btn-product">Consultar Disponibilidad</a>
+                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Cables USB-C" class="btn-product">Consultar</a>
                         </div>
                         <!-- Product 5 -->
                         <div class="product-card">
@@ -261,7 +402,7 @@
                             </div>
                             <h3>Auriculares</h3>
                             <p class="product-price">Desde $4.500</p>
-                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Auriculares" class="btn-product">Consultar Disponibilidad</a>
+                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Auriculares" class="btn-product">Consultar</a>
                         </div>
                         <!-- Product 6 -->
                         <div class="product-card">
@@ -270,7 +411,7 @@
                             </div>
                             <h3>Módulos de Repuesto</h3>
                             <p class="product-price">Consultar</p>
-                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Módulos de Repuesto" class="btn-product">Consultar Disponibilidad</a>
+                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Módulos de Repuesto" class="btn-product">Consultar</a>
                         </div>
                         <!-- Product 7 -->
                         <div class="product-card">
@@ -279,7 +420,7 @@
                             </div>
                             <h3>Soportes para Auto</h3>
                             <p class="product-price">Desde $2.800</p>
-                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Soportes para Auto" class="btn-product">Consultar Disponibilidad</a>
+                            <a href="https://wa.me/5492604000000?text=Consulto disponibilidad de Soportes para Auto" class="btn-product">Consultar</a>
                         </div>
                         <!-- Product 8: Power Banks -->
                         <div class="product-card">
